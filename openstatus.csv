@@ -1,0 +1,88 @@
+id,countyname,openstatus,openyear,plcyyear,statustext
+001,Aitkin,SL,,,Sale & Licensure of Data or Status Unknown
+003,Anoka,DFAP,,2014,Data Freely Available: Adoption of Open Data Policy
+005,Becker,DFANP,2008,,Data Freely Available: No Policy Adopted
+007,Beltrami,SL,,,Sale & Licensure of Data or Status Unknown
+009,Benton,SL,,,Sale & Licensure of Data or Status Unknown
+011,Big Stone,DFANP,2015,,Data Freely Available: No Policy Adopted
+013,Blue Earth,SL,,,Sale & Licensure of Data or Status Unknown
+015,Brown,SL,,,Sale & Licensure of Data or Status Unknown
+017,Carlton,PUC,,,Free and Open Data Under Consideration
+019,Carver,DFAP,,2014,Data Freely Available: Adoption of Open Data Policy
+021,Cass,SL,,,Sale & Licensure of Data or Status Unknown
+023,Chippewa,SL,,,Sale & Licensure of Data or Status Unknown
+025,Chisago,DFANP,2007,,Data Freely Available: No Policy Adopted
+027,Clay,DFAP,1999,2014,Data Freely Available: Adoption of Open Data Policy
+029,Clearwater,SL,,,Sale & Licensure of Data or Status Unknown
+031,Cook,SL,,,Sale & Licensure of Data or Status Unknown
+033,Cottonwood,SL,,,Sale & Licensure of Data or Status Unknown
+035,Crow Wing,SL,,,Sale & Licensure of Data or Status Unknown
+037,Dakota,DFAP,,2014,Data Freely Available: Adoption of Open Data Policy
+039,Dodge,SL,,,Sale & Licensure of Data or Status Unknown
+041,Douglas,SL,,,Sale & Licensure of Data or Status Unknown
+043,Faribault,SL,,,Sale & Licensure of Data or Status Unknown
+045,Fillmore,SL,,,Sale & Licensure of Data or Status Unknown
+047,Freeborn,SL,,,Sale & Licensure of Data or Status Unknown
+049,Goodhue,SL,,,Sale & Licensure of Data or Status Unknown
+051,Grant,SL,,,Sale & Licensure of Data or Status Unknown
+053,Hennepin,DFAP,,2014,Data Freely Available: Adoption of Open Data Policy
+055,Houston,SL,,,Sale & Licensure of Data or Status Unknown
+057,Hubbard,SL,,,Sale & Licensure of Data or Status Unknown
+059,Isanti,SL,,,Sale & Licensure of Data or Status Unknown
+061,Itasca,DFAP,,2015,Data Freely Available: Adoption of Open Data Policy
+063,Jackson,SL,,,Sale & Licensure of Data or Status Unknown
+065,Kanabec,SL,,,Sale & Licensure of Data or Status Unknown
+067,Kandiyohi,SL,,,Sale & Licensure of Data or Status Unknown
+069,Kittson,DFANP,2014,,Data Freely Available: No Policy Adopted
+071,Koochiching,SL,,,Sale & Licensure of Data or Status Unknown
+073,Lac Qui Parle,SL,,,Sale & Licensure of Data or Status Unknown
+075,Lake,DFANP,2015,,Data Freely Available: No Policy Adopted
+077,Lake of the Woods,SL,,,Sale & Licensure of Data or Status Unknown
+079,Le Sueur,SL,,,Sale & Licensure of Data or Status Unknown
+081,Lincoln,SL,,,Sale & Licensure of Data or Status Unknown
+083,Lyon,SL,,,Sale & Licensure of Data or Status Unknown
+085,McLeod,SL,,,Sale & Licensure of Data or Status Unknown
+087,Mahnomen,SL,,,Sale & Licensure of Data or Status Unknown
+089,Marshall,SL,,,Sale & Licensure of Data or Status Unknown
+091,Martin,SL,,,Sale & Licensure of Data or Status Unknown
+093,Meeker,SL,,,Sale & Licensure of Data or Status Unknown
+095,Mille Lacs,SL,,,Sale & Licensure of Data or Status Unknown
+097,Morrison,SL,,,Sale & Licensure of Data or Status Unknown
+099,Mower,SL,,,Sale & Licensure of Data or Status Unknown
+101,Murray,SL,,,Sale & Licensure of Data or Status Unknown
+103,Nicollet,SL,,,Sale & Licensure of Data or Status Unknown
+105,Nobles,SL,,,Sale & Licensure of Data or Status Unknown
+107,Norman,SL,,,Sale & Licensure of Data or Status Unknown
+109,Olmsted,SL,,,Sale & Licensure of Data or Status Unknown
+111,Otter Tail,DFANP,2009,,Data Freely Available: No Policy Adopted
+113,Pennington,SL,,,Sale & Licensure of Data or Status Unknown
+115,Pine,SL,,,Sale & Licensure of Data or Status Unknown
+117,Pipestone,SL,,,Sale & Licensure of Data or Status Unknown
+119,Polk,SL,,,Sale & Licensure of Data or Status Unknown
+121,Pope,SL,,,Sale & Licensure of Data or Status Unknown
+123,Ramsey,DFAP,,2014,Data Freely Available: Adoption of Open Data Policy
+125,Red Lake,SL,,,Sale & Licensure of Data or Status Unknown
+127,Redwood,SL,,,Sale & Licensure of Data or Status Unknown
+129,Renville,SL,,,Sale & Licensure of Data or Status Unknown
+131,Rice,PUC,,,Free and Open Data Under Consideration
+133,Rock,SL,,,Sale & Licensure of Data or Status Unknown
+135,Roseau,SL,,,Sale & Licensure of Data or Status Unknown
+137,St. Louis,DFANP,2015,,Data Freely Available: No Policy Adopted
+139,Scott,DFAP,,2015,Data Freely Available: Adoption of Open Data Policy
+141,Sherburne,DFANP,2015,,Data Freely Available: No Policy Adopted
+143,Sibley,SL,,,Sale & Licensure of Data or Status Unknown
+145,Stearns,DFANP,2014,,Data Freely Available: No Policy Adopted
+147,Steele,SL,,,Sale & Licensure of Data or Status Unknown
+149,Stevens,SL,,,Sale & Licensure of Data or Status Unknown
+151,Swift,SL,,,Sale & Licensure of Data or Status Unknown
+153,Todd,SL,,,Sale & Licensure of Data or Status Unknown
+155,Traverse,SL,,,Sale & Licensure of Data or Status Unknown
+157,Wabasha,SL,,,Sale & Licensure of Data or Status Unknown
+159,Wadena,SL,,,Sale & Licensure of Data or Status Unknown
+161,Waseca,SL,,,Sale & Licensure of Data or Status Unknown
+163,Washington,DFAP,,2014,Data Freely Available: Adoption of Open Data Policy
+165,Watonwan,SL,,,Sale & Licensure of Data or Status Unknown
+167,Wilkin,SL,,,Sale & Licensure of Data or Status Unknown
+169,Winona,SL,,,Sale & Licensure of Data or Status Unknown
+171,Wright,SL,,,Sale & Licensure of Data or Status Unknown
+173,Yellow Medicine,SL,,,Sale & Licensure of Data or Status Unknown
