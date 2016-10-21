@@ -19,8 +19,10 @@
 <script src="//d3js.org/queue.v1.min.js"></script>
 <script>
 
-var width = 960,
+var width = 960;
     height = 500;
+    legendRectSize = 18;
+    legendSpacing = 4;
 
 var oStat = d3.map();
 
@@ -36,12 +38,41 @@ var svg = d3.select("body").append("svg")
       .rotate([93.25, 0])
       .center([0, 46.5]);
 
+var lookup = {"DFANP":"Open - No Policy", "DFAP":"Open - Policy", "PUC":"Policy Under Consideration", "SL":"Not Open or Unknown","PD":"Public Domain"}
+
+
 var color = d3.scale.ordinal()
-      .domain([ "DFANP","DFAP","PUC","SL"])
-      .range([ "#99d58c","#14613f","#95afec","#f4b77a"]);
+    .domain(["PD","DFANP","DFAP","PUC","SL"])
+    .range(["#cc3300","#99d58c","#14613f","#95afec","#f4b77a"]);
+
+    var legend = d3.select('svg')
+        .append("g")
+        .selectAll("g")
+        .data(color.domain())
+        .enter()
+        .append('g')
+          .attr('class', 'legend')
+          .attr('transform', function(d, i) {
+            var height = legendRectSize;
+            var x = 0;
+            var y = i * height;
+            return 'translate(' + x + ',' + y + ')';
+        });
 
 var geoPath = d3.geo.path()
           .projection(projection);
+
+          legend.append('rect')
+              .attr('width', legendRectSize)
+              .attr('height', legendRectSize)
+              .style('fill', color)
+              .style('stroke', color);
+
+          legend.append('text')
+              .attr('x', legendRectSize + legendSpacing)
+              .attr('y', legendRectSize - legendSpacing)
+              .text(function(d) { return lookup[d]; });
+
 
 queue()
     .defer(d3.json, "mnocounties.json")
