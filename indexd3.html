@@ -10,17 +10,36 @@
 .hover {
   fill: red;
   opacity: .5;
+
+}
+    .hidden {
+        display: none;
+    }
+    div.tooltip {
+        color: #222;
+        background-color: #fff;
+        padding: .5em;
+        text-shadow: #f5f5f5 0 1px 0;
+        border-radius: 2px;
+        opacity: 0.9;
+        position: absolute;
+    }
 }
 
 </style>
 <body>
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script src="//d3js.org/topojson.v1.min.js"></script>
-<script src="//d3js.org/queue.v1.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
 <script>
 
-var width = 960,
+var width = 960;
     height = 500;
+    legendRectSize = 18;
+    legendSpacing = 4;
+
+var tooltip = d3.select('body').append('div')
+    .attr('class', 'hidden tooltip');
 
 var oStat = d3.map();
 
@@ -36,16 +55,46 @@ var svg = d3.select("body").append("svg")
       .rotate([93.25, 0])
       .center([0, 46.5]);
 
+var lookup = {"DFANP":"Open - No Policy", "DFAP":"Open - Policy", "PUC":"Policy Under Consideration", "SL":"Not Open or Unknown","PD":"Public Domain"}
+
+
 var color = d3.scale.ordinal()
-      .domain([ "DFANP","DFAP","PUC","SL"])
-      .range([ "#99d58c","#14613f","#95afec","#f4b77a"]);
+    .domain(["PD","DFANP","DFAP","PUC","SL"])
+    .range(["#cc3300","#99d58c","#14613f","#95afec","#f4b77a"]);
+
+    var legend = d3.select('svg')
+        .append("g")
+        .selectAll("g")
+        .data(color.domain())
+        .enter()
+        .append('g')
+          .attr('class', 'legend')
+          .attr('transform', function(d, i) {
+            var height = legendRectSize;
+            var x = 0;
+            var y = i * height;
+            return 'translate(' + x + ',' + y + ')';
+        });
 
 var geoPath = d3.geo.path()
           .projection(projection);
 
+          legend.append('rect')
+              .attr('width', legendRectSize)
+              .attr('height', legendRectSize)
+              .style('fill', color)
+              .style('stroke', color);
+
+          legend.append('text')
+              .attr('x', legendRectSize + legendSpacing)
+              .attr('y', legendRectSize - legendSpacing)
+              .text(function(d) { return lookup[d]; });
+
+
 queue()
     .defer(d3.json, "mnocounties.json")
-    .defer(d3.csv,"openstatus.csv", function(d) { oStat.set(d.id, d.openstatus); })
+    //.defer(d3.csv,"openstatus.csv", function(d) { oStat.set(d.id, d.openstatus); })
+    .defer(d3.csv,"openstatus.csv", function(d) { oStat.set(d.id, [d.openstatus,d.openyear,d.plcyyear]); })
     .await(ready);
 
 function ready (error, mnocounties) {
@@ -54,17 +103,23 @@ function ready (error, mnocounties) {
       .data(topojson.feature(mnocounties, mnocounties.objects.mncounties_4326).features)
     .enter().append("path")
     .attr("class","county")
-      .style("fill", function(d) { return color(oStat.get(d.id)); })
+      .style("fill", function(d) { return color(oStat.get(d.id)[0]); })
       .attr("d", geoPath) //;
 
-      .on ("mouseover", function(d) {
-        //d3.select("info").text(d.properties.COUNTYNAME);
-      //info.update("<h4>" + d.properties.COUNTYNAME + " County</h4><b>" + d.properties.STATUSTEXT + "</b><br />" + (d.properties.OPENYEAR != null ? "<b>Year Opened: " + d.properties.OPENYEAR + "</b><br />": "" ) + (d.properties.PLCYYEAR != null ? "<b>Policy Approved: " + d.properties.PLCYYEAR + "</b>" : "" )
-    //);
+      .on('mousemove', function(d) {
+                    var mouse = d3.mouse(svg.node()).map(function(d) {
+                        return parseInt(d);
+                    });
+        tooltip.classed('hidden', false)
+                          .attr('style', 'left:' + (mouse[0] + 15) +
+                                  'px; top:' + (mouse[1] - 35) + 'px')
+                                  .html(d.properties.name + "<br>" + lookup[oStat.get(d.id)[0]]+ "<br>"  + (oStat.get(d.id)[1] != "" ? "Opened in " + oStat.get(d.id)[1] + "<br />": "" ) + (oStat.get(d.id)[2] != "" ? "Policy in " + oStat.get(d.id)[2]: "" ));
+
       d3.select(this).attr("class","hover");})
       .on ("mouseout", function(d) {
-        //d3.select("info").text(d.properties.COUNTYNAME);
-      //info.update('Hover over a County');
+
+
+      tooltip.classed('hidden', true);
       d3.select(this).attr("class","county");})
 };
 

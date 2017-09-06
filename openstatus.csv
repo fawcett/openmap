@@ -12,7 +12,7 @@ id,countyname,openstatus,openyear,plcyyear,statustext
 021,Cass,SL,,,Sale & Licensure of Data or Status Unknown
 023,Chippewa,SL,,,Sale & Licensure of Data or Status Unknown
 025,Chisago,DFANP,2007,,Data Freely Available: No Policy Adopted
-027,Clay,DFAP,1999,2014,Data Freely Available: Adoption of Open Data Policy
+027,Clay,PD,1999,2014,Public Domain
 029,Clearwater,SL,,,Sale & Licensure of Data or Status Unknown
 031,Cook,SL,,,Sale & Licensure of Data or Status Unknown
 033,Cottonwood,SL,,,Sale & Licensure of Data or Status Unknown
@@ -64,7 +64,7 @@ id,countyname,openstatus,openyear,plcyyear,statustext
 125,Red Lake,SL,,,Sale & Licensure of Data or Status Unknown
 127,Redwood,SL,,,Sale & Licensure of Data or Status Unknown
 129,Renville,SL,,,Sale & Licensure of Data or Status Unknown
-131,Rice,PUC,,,Free and Open Data Under Consideration
+131,Rice,DFANP,2016,,Data Freely Available: No Policy Adopted
 133,Rock,SL,,,Sale & Licensure of Data or Status Unknown
 135,Roseau,SL,,,Sale & Licensure of Data or Status Unknown
 137,St. Louis,DFANP,2015,,Data Freely Available: No Policy Adopted
@@ -79,7 +79,7 @@ id,countyname,openstatus,openyear,plcyyear,statustext
 155,Traverse,SL,,,Sale & Licensure of Data or Status Unknown
 157,Wabasha,SL,,,Sale & Licensure of Data or Status Unknown
 159,Wadena,SL,,,Sale & Licensure of Data or Status Unknown
-161,Waseca,SL,,,Sale & Licensure of Data or Status Unknown
+161,Waseca,DFAP,,2016,Data Freely Available: Adoption of Open Data Policy
 163,Washington,DFAP,,2014,Data Freely Available: Adoption of Open Data Policy
 165,Watonwan,SL,,,Sale & Licensure of Data or Status Unknown
 167,Wilkin,SL,,,Sale & Licensure of Data or Status Unknown
