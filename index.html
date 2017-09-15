@@ -62,10 +62,14 @@ county {
 <div id="map">
 
 <script>
-var map = L.map('map',{zoomControl:false}).setView([46.25, -93.25], 6);
+var map = L.map('map',{zoomControl:false, maxBounds:[
+    [42.8, -99.0],
+    [49.6, -88.1]
+]}).setView([46.25, -93.25], 6);
 
 L.tileLayer('//server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-  maxZoom: 20,
+  maxZoom: 6,
+  minZoom: 6,
   attribution: '<a href="http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer">Basemap Source</a> | '+
   'Data Sources: Communications with County Staff and searches of County websites and data portals.'
 }).addTo(map);
