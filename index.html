@@ -93,6 +93,9 @@ d3.json("opencounties.geojson", function(error, collection) {
     .attr("d", path)
     .attr("class", "county")
     .style("fill", function(d) { return color(d.properties.OPENSTATUS); })
+    .on("touch", function(d) {
+      info.update("<h4>" + d.properties.COUNTYNAME + " County</h4><b>" + d.properties.STATUSTEXT + "</b><br />" + (d.properties.OPENYEAR != null ? "<b>Year Opened: " + d.properties.OPENYEAR + "</b><br />": "" ) + (d.properties.PLCYYEAR != null ? "<b>Policy Approved: " + d.properties.PLCYYEAR + "</b>" : "" ) );
+      d3.select(this).attr("class","hover");})
     .on ("mouseover", function(d) {
       //d3.select("info").text(d.properties.COUNTYNAME);
     info.update("<h4>" + d.properties.COUNTYNAME + " County</h4><b>" + d.properties.STATUSTEXT + "</b><br />" + (d.properties.OPENYEAR != null ? "<b>Year Opened: " + d.properties.OPENYEAR + "</b><br />": "" ) + (d.properties.PLCYYEAR != null ? "<b>Policy Approved: " + d.properties.PLCYYEAR + "</b>" : "" ) );
